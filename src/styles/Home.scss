@@ -1,6 +1,56 @@
-@use 'Base';
+@use "Base";
 
 h1 {
   color: inherit;
 }
 
+.content {
+  min-width: 75vw;
+  margin: 2rem auto;
+  // height: 3000px;
+  background-color: rgb(179, 220, 206);
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+
+  /* Four equal columns that sit next to each other */
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+
+    img {
+      margin: 8px 0;
+      vertical-align: middle;
+      width: 100%;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 300ms ease-in-out;
+        -moz-transition: transform 300ms ease-in-out;
+      }
+    }
+  }
+
+  /* Two column responsive layout */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%; /* IE10 */
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+  /* Two responsive columns that stack on top of each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%; /* IE10 */
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+}

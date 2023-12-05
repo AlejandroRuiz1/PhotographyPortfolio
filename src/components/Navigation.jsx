@@ -8,7 +8,7 @@ const Navigation = () => {
         <h1>Photographer Name</h1>
       </div>
       <div className="Links">
-        <Link className="link" to="/home">
+        <Link className="link" to="/">
           <p>Home</p>
         </Link>
         <Link className="link" to="/about">
